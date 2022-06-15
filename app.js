@@ -17,7 +17,7 @@ app.get('/quote/:param', (req, res) => {
 });
 
 app.get('*', (req, res) => {
-  res.status(404).send('Not Found!');
+  res.status(404).send({error: 'Not Found!'});
   console.log(res.statusCode + ' ' + req.method + ' ' + req.url );
 })
 
